@@ -1,0 +1,149 @@
+.main_page {
+  /* background-color: rgba(var(--black-rgb)); */
+  background-color: #0d0d0d;
+  color: var(--font-light);
+}
+.home_container {
+  padding: 1rem;
+  margin: 0px auto;
+  display: flex;
+  align-items: center;
+  min-height: calc(100vh - 3.5rem);
+  justify-content: center;
+  max-width: 70rem;
+  position: relative;
+  overflow: hidden;
+}
+.about_container{
+  padding: 1rem;
+  margin: 0rem auto;
+  max-width: 70rem;
+  position: relative;
+}
+.home_getstarted {
+  display: grid;
+  gap: 0.6rem;
+  text-transform: capitalize;
+  z-index: 2;
+}
+.home_getstarted small{
+  font-size: clamp(0.9rem, calc(0.5rem + 5vw), 1rem);
+  display: block;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: rgba(var(--secondry-rgb), 0.8);
+}
+.home_getstarted h1 {
+  margin: 0.1rem 0rem 1rem;
+  font-size: clamp(2.5rem, calc(0.5rem + 5vw), 4rem);
+}
+.home_getstarted h1 span,
+.home_getstarted h2 span,
+.home_getstarted h3 span,
+.home_getstarted p span {
+  color: rgba(var(--secondry-rgb), 1);
+}
+@keyframes neon {
+  0% {
+    text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+    0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+    0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+  }
+  50% {
+    text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+    0 0 5px var(--shadow-color-light), 0 0 15px var(--shadow-color-light), 0 0 25px var(--shadow-color-light),
+    0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 60px var(--shadow-color), 0 0 80px var(--shadow-color), 0 0 110px var(--shadow-color), 0 0 210px var(--shadow-color);
+  }
+  100% {
+    text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+    0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+    0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+  }
+}
+.home_getstarted p {
+  font-size: clamp(0.9rem, calc(1rem + 1vw), 1.2rem);
+  opacity: 0.9;
+}
+.home_btns {
+  margin: 1rem;
+  display: flex;
+  /* justify-content: center; */
+  gap: 0.5rem;
+}
+.home_getstarted button {
+  margin: 1rem 0rem;
+  padding: 0.5rem;
+  width: 10rem;
+  border-radius: 0.2rem;
+  background-color: rgba(var(--secondry-rgb), 0.8);
+  color: var(--font-dark);
+  border: 2px solid transparent;
+  letter-spacing: 0.5px;
+}
+.home_getstarted button:hover {
+  gap: 0.5rem;
+  transition: 0.3s ease;
+  background-color: rgba(var(--secondry-rgb), 1);
+}
+.landing_img {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  opacity: 0.1;
+}
+
+@media (max-width: 1920px) {
+  .landing_img{
+    display: none;
+  }
+}
+
+
+.grid_about{
+  padding-bottom: 5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit , minmax(20rem , 1fr));
+  gap: 1rem;
+}
+
+.about_item_box{
+  cursor: pointer;
+  border-radius: 0.4rem;
+  /* background-color: rgba(var(--primary-rgb), 0.5); */
+  background-color: rgba(21, 113, 150, 0.20);
+  box-shadow: 0px 7px 21px rgba(var(--secondry-rgb), 0.15);
+  transition: 0.30s ease;
+}
+.about_item_box:hover{
+  transform: scale(1.01);
+  background-color: rgba(21, 113, 150, 0.40);
+  transition: 0.30s ease;
+}
+.about_item_box hr{
+  background-color: rgba(var(--black-rgb), 0.8);
+  border: 1px solid rgba(var(--black-rgb), 0.8);
+  opacity: 0.7;
+}
+.about_item_box h1 {
+  color: rgba(var(--secondry-rgb), 1);
+}
+.about_item_box h1 , .about_item_box p{
+  padding: 0.5rem 1rem;
+}
+@media (max-width: 750px) {
+  .home_container {
+    flex-direction: column;
+  }
+  .home_getstarted button {
+    margin-top: 2rem;
+  }
+
+}
+@media (max-width: 350px) {
+  .grid_about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
